@@ -1,0 +1,23 @@
+services:
+  server1:
+    build:
+      context: ./server1
+    ports:
+      - "8082:80"
+
+  server2:
+    build:
+      context: ./server2
+    ports:
+      - "8083:80"
+
+  server3:
+    build:
+      context: ./server3
+    ports:
+      - "8084:80"
+
+  loadbalancer:
+    build: ./loadbalancer
+    ports:
+      - "8081:80"
